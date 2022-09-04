@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d94349fd-5460-401f-9d7a-1cedaac766a5}</ProjectGuid>
+    <RootNamespace>YoutubeOpenGL</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>3D Fun!</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>Libraries\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>Libraries\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>Libraries\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>Libraries\include;$(IncludePath)</IncludePath>
+    <LibraryPath>Libraries\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\mineo\source\repos\opengl-tutorials\YoutubeOpenGL 9 - Lighting\TriMesh2\include;C:\Users\mineo\source\repos\opengl-tutorials\YoutubeOpenGL 9 - Lighting\TriMesh2\include\GL;C:\Users\mineo\source\repos\opengl-tutorials\YoutubeOpenGL 9 - Lighting\models;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ShowIncludes>true</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\mineo\source\repos\opengl-tutorials\YoutubeOpenGL 9 - Lighting\TriMesh2;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\mineo\source\repos\opengl-tutorials\YoutubeOpenGL 9 - Lighting\TriMesh2\include;C:\Users\mineo\source\repos\opengl-tutorials\YoutubeOpenGL 9 - Lighting\TriMesh2\include\GL;C:\Users\mineo\source\repos\opengl-tutorials\YoutubeOpenGL 9 - Lighting\models;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ShowIncludes>true</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\mineo\source\repos\opengl-tutorials\YoutubeOpenGL 9 - Lighting\TriMesh2;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="EBO.cpp" />
+    <ClCompile Include="glad.c" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="shaderClass.cpp" />
+    <ClCompile Include="stb.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_callbacks.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_cursor.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_display.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_ext.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_font.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_font_data.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_gamemode.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_geometry.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_glutfont_definitions.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_init.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_input_devices.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_joystick.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_main.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_menu.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_misc.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_overlay.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_spaceball.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_state.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_stroke_mono_roman.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_stroke_roman.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_structure.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_teapot.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_videoresize.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_window.c" />
+    <ClCompile Include="TriMesh2\gluit\freeglut_xinput.c" />
+    <ClCompile Include="TriMesh2\gluit\glui.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_add_controls.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_algebra3.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_arcball.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_bitmaps.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_bitmap_img_data.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_button.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_checkbox.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_column.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_control.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_edittext.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_checkbox_0.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_checkbox_0_dis.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_checkbox_1.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_checkbox_1_dis.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_downarrow.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_leftarrow.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_listbox_down.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_listbox_up.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_listbox_up_dis.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_radiobutton_0.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_radiobutton_0_dis.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_radiobutton_1.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_radiobutton_1_dis.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_rightarrow.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_spindown_0.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_spindown_1.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_spindown_dis.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_spinup_0.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_spinup_1.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_spinup_dis.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_img_uparrow.c" />
+    <ClCompile Include="TriMesh2\gluit\glui_listbox.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_mouse_iaction.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_node.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_panel.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_quaternion.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_radio.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_rollout.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_rotation.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_separator.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_slider.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_spinner.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_statictext.cc" />
+    <ClCompile Include="TriMesh2\gluit\glui_translation.cc" />
+    <ClCompile Include="TriMesh2\libsrc\conn_comps.cc" />
+    <ClCompile Include="TriMesh2\libsrc\diffuse.cc" />
+    <ClCompile Include="TriMesh2\libsrc\edgeflip.cc" />
+    <ClCompile Include="TriMesh2\libsrc\faceflip.cc" />
+    <ClCompile Include="TriMesh2\libsrc\filter.cc" />
+    <ClCompile Include="TriMesh2\libsrc\GLCamera.cc" />
+    <ClCompile Include="TriMesh2\libsrc\GLManager.cc" />
+    <ClCompile Include="TriMesh2\libsrc\ICP.cc" />
+    <ClCompile Include="TriMesh2\libsrc\KDtree.cc" />
+    <ClCompile Include="TriMesh2\libsrc\make.cc" />
+    <ClCompile Include="TriMesh2\libsrc\merge.cc" />
+    <ClCompile Include="TriMesh2\libsrc\overlap.cc" />
+    <ClCompile Include="TriMesh2\libsrc\remove.cc" />
+    <ClCompile Include="TriMesh2\libsrc\reorder_verts.cc" />
+    <ClCompile Include="TriMesh2\libsrc\subdiv.cc" />
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_bounding.cc" />
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_connectivity.cc" />
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_curvature.cc" />
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_grid.cc" />
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_io.cc" />
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_normals.cc" />
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_pointareas.cc" />
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_stats.cc" />
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_tstrips.cc" />
+    <ClCompile Include="TriMesh2\libsrc\umbrella.cc" />
+    <ClCompile Include="VAO.cpp" />
+    <ClCompile Include="VBO.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="EBO.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="shaderClass.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TriMesh2\gluit\freeglut_config.h" />
+    <ClInclude Include="TriMesh2\gluit\freeglut_internal.h" />
+    <ClInclude Include="TriMesh2\gluit\freeglut_teapot_data.h" />
+    <ClInclude Include="TriMesh2\gluit\glui_algebra3.h" />
+    <ClInclude Include="TriMesh2\gluit\glui_arcball.h" />
+    <ClInclude Include="TriMesh2\gluit\glui_quaternion.h" />
+    <ClInclude Include="TriMesh2\gluit\glui_stdinc.h" />
+    <ClInclude Include="TriMesh2\include\Box.h" />
+    <ClInclude Include="TriMesh2\include\bsphere.h" />
+    <ClInclude Include="TriMesh2\include\Color.h" />
+    <ClInclude Include="TriMesh2\include\endianutil.h" />
+    <ClInclude Include="TriMesh2\include\GLCamera.h" />
+    <ClInclude Include="TriMesh2\include\GLManager.h" />
+    <ClInclude Include="TriMesh2\include\GL\freeglut.h" />
+    <ClInclude Include="TriMesh2\include\GL\freeglut_ext.h" />
+    <ClInclude Include="TriMesh2\include\GL\freeglut_std.h" />
+    <ClInclude Include="TriMesh2\include\GL\glui.h" />
+    <ClInclude Include="TriMesh2\include\GL\glut.h" />
+    <ClInclude Include="TriMesh2\include\ICP.h" />
+    <ClInclude Include="TriMesh2\include\KDtree.h" />
+    <ClInclude Include="TriMesh2\include\lineqn.h" />
+    <ClInclude Include="TriMesh2\include\mathcompat.h" />
+    <ClInclude Include="TriMesh2\include\mathutil.h" />
+    <ClInclude Include="TriMesh2\include\noise3d.h" />
+    <ClInclude Include="TriMesh2\include\strutil.h" />
+    <ClInclude Include="TriMesh2\include\timestamp.h" />
+    <ClInclude Include="TriMesh2\include\TriMesh.h" />
+    <ClInclude Include="TriMesh2\include\TriMesh_algo.h" />
+    <ClInclude Include="TriMesh2\include\Vec.h" />
+    <ClInclude Include="TriMesh2\include\XForm.h" />
+    <ClInclude Include="VAO.h" />
+    <ClInclude Include="VBO.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="default.frag" />
+    <None Include="default.vert" />
+    <None Include="light.frag" />
+    <None Include="light.vert" />
+    <None Include="models\cube.ply" />
+    <None Include="models\cuboctahedron.ply" />
+    <None Include="models\disdyakis_triacontahedron.ply" />
+    <None Include="models\pentagonal_hexecontahedron.ply" />
+    <None Include="models\snub_dodecahedron.ply" />
+    <None Include="models\tetrahedron.ply" />
+    <None Include="models\truncated_icosidodecahedron.ply" />
+    <None Include="plane.frag" />
+    <None Include="plane.vert" />
+    <None Include="TriMesh2\gluit\COPYING.freeglut" />
+    <None Include="TriMesh2\gluit\COPYING.glui" />
+    <None Include="TriMesh2\gluit\Makefile" />
+    <None Include="TriMesh2\libsrc\ICP.cc.new" />
+    <None Include="TriMesh2\libsrc\ICP.cc.new2" />
+    <None Include="TriMesh2\libsrc\ICP.cc.new3" />
+    <None Include="TriMesh2\libsrc\ICP.cc.old" />
+    <None Include="TriMesh2\libsrc\ICP.cc.old2" />
+    <None Include="TriMesh2\libsrc\ICP.cc.old3" />
+    <None Include="TriMesh2\libsrc\ICP.cc.old4" />
+    <None Include="TriMesh2\libsrc\ICP.cc.old5" />
+    <None Include="TriMesh2\libsrc\ICP.cc.old6" />
+    <None Include="TriMesh2\libsrc\Makefile" />
+    <None Include="TriMesh2\libsrc\shape_data.inc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\Programming\YouTube\YoutubeOpenGL 6 - Textures\pop_cat.png" />
+    <Image Include="brick.png" />
+    <Image Include="stars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="TriMesh2\gluit.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

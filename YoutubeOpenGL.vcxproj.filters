@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Shaders">
+      <UniqueIdentifier>{a7ffa985-40f1-492c-85aa-5c3f1e35fbf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Textures">
+      <UniqueIdentifier>{05d3c78a-efa4-4af3-af3a-205814263558}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TriMesh2">
+      <UniqueIdentifier>{4ccd34fd-a1f8-4d72-8e3d-8e87663b516a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TriMesh2\gluit">
+      <UniqueIdentifier>{8d850774-03fc-408b-a7cb-2d9f9289b58a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TriMesh2\include">
+      <UniqueIdentifier>{704e8d2a-dfa3-464f-9f08-2e781bbbd0b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TriMesh2\libsrc">
+      <UniqueIdentifier>{3eab1d8f-5b6e-4d4d-9a1a-ecfeed108a86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TriMesh2\include\GL">
+      <UniqueIdentifier>{2c5ee891-5cd5-47f8-bb0d-368773b1f917}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="models">
+      <UniqueIdentifier>{9c913397-a8dd-4362-919b-79ec32ba84c6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EBO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shaderClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VAO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VBO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_callbacks.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_cursor.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_display.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_ext.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_font.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_font_data.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_gamemode.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_geometry.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_glutfont_definitions.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_init.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_input_devices.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_joystick.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_main.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_menu.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_misc.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_overlay.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_spaceball.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_state.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_stroke_mono_roman.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_stroke_roman.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_structure.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_teapot.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_videoresize.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_window.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\freeglut_xinput.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_add_controls.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_algebra3.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_arcball.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_bitmap_img_data.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_bitmaps.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_button.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_checkbox.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_column.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_control.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_edittext.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_checkbox_0.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_checkbox_0_dis.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_checkbox_1.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_checkbox_1_dis.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_downarrow.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_leftarrow.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_listbox_down.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_listbox_up.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_listbox_up_dis.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_radiobutton_0.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_radiobutton_0_dis.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_radiobutton_1.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_radiobutton_1_dis.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_rightarrow.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_spindown_0.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_spindown_1.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_spindown_dis.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_spinup_0.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_spinup_1.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_spinup_dis.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_img_uparrow.c">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_listbox.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_mouse_iaction.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_node.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_panel.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_quaternion.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_radio.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_rollout.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_rotation.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_separator.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_slider.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_spinner.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_statictext.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\gluit\glui_translation.cc">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\conn_comps.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\diffuse.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\edgeflip.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\faceflip.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\filter.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\GLCamera.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\GLManager.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\ICP.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\KDtree.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\make.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\merge.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\overlap.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\remove.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\reorder_verts.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\subdiv.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_bounding.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_connectivity.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_curvature.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_grid.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_io.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_normals.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_pointareas.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_stats.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\TriMesh_tstrips.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TriMesh2\libsrc\umbrella.cc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="EBO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shaderClass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VAO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VBO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\gluit\freeglut_config.h">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\gluit\freeglut_internal.h">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\gluit\freeglut_teapot_data.h">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\gluit\glui_algebra3.h">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\gluit\glui_arcball.h">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\gluit\glui_quaternion.h">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\gluit\glui_stdinc.h">
+      <Filter>TriMesh2\gluit</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\Box.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\bsphere.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\Color.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\endianutil.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\GLCamera.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\GLManager.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\ICP.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\KDtree.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\lineqn.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\mathcompat.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\mathutil.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\noise3d.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\strutil.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\timestamp.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\TriMesh.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\TriMesh_algo.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\Vec.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\XForm.h">
+      <Filter>TriMesh2\include</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\GL\freeglut.h">
+      <Filter>TriMesh2\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\GL\freeglut_ext.h">
+      <Filter>TriMesh2\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\GL\freeglut_std.h">
+      <Filter>TriMesh2\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\GL\glui.h">
+      <Filter>TriMesh2\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="TriMesh2\include\GL\glut.h">
+      <Filter>TriMesh2\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="default.vert">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="default.frag">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="light.frag">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="light.vert">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="TriMesh2\gluit\COPYING.freeglut">
+      <Filter>TriMesh2\gluit</Filter>
+    </None>
+    <None Include="TriMesh2\gluit\COPYING.glui">
+      <Filter>TriMesh2\gluit</Filter>
+    </None>
+    <None Include="TriMesh2\gluit\Makefile">
+      <Filter>TriMesh2\gluit</Filter>
+    </None>
+    <None Include="TriMesh2\libsrc\ICP.cc.new">
+      <Filter>TriMesh2\libsrc</Filter>
+    </None>
+    <None Include="TriMesh2\libsrc\ICP.cc.new2">
+      <Filter>TriMesh2\libsrc</Filter>
+    </None>
+    <None Include="TriMesh2\libsrc\ICP.cc.new3">
+      <Filter>TriMesh2\libsrc</Filter>
+    </None>
+    <None Include="TriMesh2\libsrc\ICP.cc.old">
+      <Filter>TriMesh2\libsrc</Filter>
+    </None>
+    <None Include="TriMesh2\libsrc\ICP.cc.old2">
+      <Filter>TriMesh2\libsrc</Filter>
+    </None>
+    <None Include="TriMesh2\libsrc\ICP.cc.old3">
+      <Filter>TriMesh2\libsrc</Filter>
+    </None>
+    <None Include="TriMesh2\libsrc\ICP.cc.old4">
+      <Filter>TriMesh2\libsrc</Filter>
+    </None>
+    <None Include="TriMesh2\libsrc\ICP.cc.old5">
+      <Filter>TriMesh2\libsrc</Filter>
+    </None>
+    <None Include="TriMesh2\libsrc\ICP.cc.old6">
+      <Filter>TriMesh2\libsrc</Filter>
+    </None>
+    <None Include="TriMesh2\libsrc\Makefile">
+      <Filter>TriMesh2\libsrc</Filter>
+    </None>
+    <None Include="TriMesh2\libsrc\shape_data.inc">
+      <Filter>TriMesh2\libsrc</Filter>
+    </None>
+    <None Include="models\cube.ply">
+      <Filter>models</Filter>
+    </None>
+    <None Include="models\cuboctahedron.ply">
+      <Filter>models</Filter>
+    </None>
+    <None Include="models\disdyakis_triacontahedron.ply">
+      <Filter>models</Filter>
+    </None>
+    <None Include="models\pentagonal_hexecontahedron.ply">
+      <Filter>models</Filter>
+    </None>
+    <None Include="models\snub_dodecahedron.ply">
+      <Filter>models</Filter>
+    </None>
+    <None Include="models\tetrahedron.ply">
+      <Filter>models</Filter>
+    </None>
+    <None Include="models\truncated_icosidodecahedron.ply">
+      <Filter>models</Filter>
+    </None>
+    <None Include="plane.vert">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+    <None Include="plane.frag">
+      <Filter>Resource Files\Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\Programming\YouTube\YoutubeOpenGL 6 - Textures\pop_cat.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
+    <Image Include="brick.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
+    <Image Include="stars.png">
+      <Filter>Resource Files\Textures</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="TriMesh2\gluit.lib">
+      <Filter>TriMesh2</Filter>
+    </Library>
+  </ItemGroup>
+</Project>
