@@ -124,8 +124,12 @@ int main()
 	// So that means we only have the modern functions
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	// Create a GLFWwindow object of 800 by 800 pixels, naming it "YoutubeOpenGL"
-	GLFWwindow* window = glfwCreateWindow(width, height, "3D Fun!", NULL, NULL);
+	// window name 
+	const char* window_name = "3D Fun!";
+
+	// Create a GLFWwindow object of width x height pixels, naming it with value of window_name
+	GLFWwindow* window = glfwCreateWindow(width, height, window_name, NULL, NULL);
+
 	// Error check if the window fails to create
 	if (window == NULL)
 	{
@@ -318,7 +322,7 @@ int main()
 	pyramidModel = glm::translate(pyramidModel, pyramidPos);
 
 	//light object position and color
-	glm::vec3 lightColor = glm::vec3(1.0f, 1.0f, 1.0f);
+	glm::vec3 lightColor = glm::vec3(1.0f, 0.0f, 1.0f);
 	glm::vec3 lightPos = glm::vec3(0.0f, 60.0f, 0.0f);
 	glm::mat4 lightModel = glm::mat4(1.0f);
 	lightModel = glm::translate(lightModel, lightPos);
