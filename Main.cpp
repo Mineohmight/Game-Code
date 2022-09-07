@@ -5,7 +5,6 @@
 #include<glm/glm.hpp>
 #include<glm/gtc/matrix_transform.hpp>
 #include<glm/gtc/type_ptr.hpp>
-#include <random>
 #include <functional>
 #include <algorithm>
 
@@ -17,16 +16,6 @@
 #include"Camera.h"
 #include "Model.h"
 #include "Player.h"
-
-// SIMULATION ONE
-
-// function for resizing the viewport when the window is resized
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-	glViewport(0, 0, width, height);
-}
-
-
 
 const unsigned int width = 900;
 const unsigned int height = 900;
@@ -65,7 +54,11 @@ GLuint lightIndices[] =
 };
 
 
-
+// function for resizing the viewport when the window is resized
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+	glViewport(0, 0, width, height);
+}
 
 int main()
 {
@@ -86,32 +79,8 @@ int main()
 	Model plane("models/plane.ply", { 500.0f, 500.0f, 1.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f });
 	static_models.emplace_back(plane);
 
-			//skybox (going to utilize the regular shader for this)
-	Model skybox("models/cube.ply", { 500.0f, 500.0f, 500.0f }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f });
-
-	//random float generator
-	std::mt19937 generator;
-	std::uniform_real_distribution<float> uniform_distribution_scaling(5.0f, 20.0f);
-
-	//generate static models
-	for (int i = 0; i < 100; i++)
-	{
-		//get random floats
-		float randX = uniform_distribution_scaling(generator);
-		float randY = uniform_distribution_scaling(generator);
-		float randZ = uniform_distribution_scaling(generator);
-
-		static_models.emplace_back(Model("models/ssphere.ply", { randX, randY, randZ }, { 0.0f, 0.0f, 0.0f }, { 1.0f, 1.0f, 1.0f }));
-		std::cout << "RANDOMS: " << randX << "\t" << randY << "\t" << randZ << "\t" << std::endl;
-	}
-
 	//create player
 	Player player(glm::vec3(0.0f,0.0f,0.0f), glm::vec3(0.0f,0.0f,0.0f), glm::vec3(0.0f, 0.0f, 0.0f));
-
-	//Model plane("models/plane.ply", { 0.0f,0.0f,0.0f }, { 0.4f,0.7f,0.4f });
-	//models.emplace_back(plane);
-
-	
 
 	// Initialize GLFW
 	glfwInit();
@@ -124,7 +93,7 @@ int main()
 	// So that means we only have the modern functions
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	// window name 
+	// window name
 	const char* window_name = "3D Fun!";
 
 	// Create a GLFWwindow object of width x height pixels, naming it with value of window_name
@@ -143,7 +112,7 @@ int main()
 	//Load GLAD so it configures OpenGL
 	gladLoadGL();
 	// Specify the viewport of OpenGL in the Window
-	// In this case the viewport goes from x = 0, y = 0, to x = 800, y = 800
+	// In this case the viewport goes from x = 0, y = 0, to x = width, y = height
 	glViewport(0, 0, width, height);
 
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
@@ -195,46 +164,6 @@ int main()
 		tempEBO.Unbind();
 	}
 
-
-
-
-
-
-
-
-
-
-
-			//skybox
-	//make shader object
-	Shader skyboxShader("plane.vert", "plane.frag");
-	// create and bind
-	VAO skyboxVAO;
-	skyboxVAO.Bind();
-	// VBO AND EBO
-	VBO skyboxVBO(&skybox.vertices.front(), skybox.vertices.size() * sizeof(GLfloat));
-	EBO skyboxEBO(&skybox.indices.front(), skybox.indices.size() * sizeof(GLuint));
-	//link attributes
-	skyboxVAO.LinkAttrib(skyboxVBO, 0, 3, GL_FLOAT, 11 * sizeof(float), (void*)0);
-	skyboxVAO.LinkAttrib(skyboxVBO, 1, 3, GL_FLOAT, 11 * sizeof(float), (void*)(3 * sizeof(float)));
-	skyboxVAO.LinkAttrib(skyboxVBO, 2, 2, GL_FLOAT, 11 * sizeof(float), (void*)(6 * sizeof(float)));
-	skyboxVAO.LinkAttrib(skyboxVBO, 3, 3, GL_FLOAT, 11 * sizeof(float), (void*)(8 * sizeof(float)));
-	//Unbind all
-	skyboxVAO.Unbind();
-	skyboxVBO.Unbind();
-	skyboxEBO.Unbind();
-
-
-
-
-
-
-
-
-
-
-
-
 	// Shader for light cube
 	Shader lightShader("light.vert", "light.frag");
 	// Generates Vertex Array Object and binds it
@@ -268,54 +197,6 @@ int main()
 	//rotate the first model in the model container (which is the plane)
 	staticModels.at(0) = glm::rotate(staticModels.at(0), glm::radians(90.0f), glm::vec3(1.0f, 0.0f, 0.0f));
 
-	//move tetrahedrons to random locations (start at the second index because the first is the plane)
-		//the distribution we will be using
-	std::uniform_real_distribution<float> uniform_distribution_translating(20.0f, 80.0f);
-	// creating gen object for use generating a random bool
-	auto gen = std::bind(std::uniform_int_distribution<>(0, 1), std::default_random_engine()); 
-	for (int i = 1; i < static_models.size(); i++)
-	{
-		//generate random floats between -45 and 45
-		bool b1 = gen();
-		bool b2 = gen();
-
-		float translateRandomX = uniform_distribution_translating(generator);
-		float translateRandomZ = uniform_distribution_translating(generator);
-
-		if (b1)
-		{
-			translateRandomX = -translateRandomX;
-		}
-		if (b2)
-		{
-			translateRandomZ = -translateRandomZ;
-		}
-
-		staticModelPositions.at(i) = glm::vec3(translateRandomX, 0.0f, translateRandomZ);
-		staticModels.at(i) = glm::translate(staticModels.at(i), staticModelPositions.at(i));
-	}
-
-
-
-
-
-
-
-
-
-	//skybox object position
-	glm::vec3 skyboxPos = glm::vec3(0.0f, 0.0f, 0.0f);
-	glm::mat4 skyboxModel = glm::mat4(1.0f);
-	skyboxModel = glm::translate(skyboxModel, skyboxPos);
-
-
-
-
-
-
-
-
-
 	//pyramid object position
 	glm::vec3 pyramidPos = glm::vec3(0.0f, 1.0f, 2.0f);
 	glm::mat4 pyramidModel = glm::mat4(1.0f);
@@ -334,7 +215,7 @@ int main()
 	glUniform3f(glGetUniformLocation(lightShader.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z);
 
 
-	//object
+	// pyramid object
 	shaderProgram.Activate();
 	glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, glm::value_ptr(pyramidModel));
 	glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z);
@@ -353,7 +234,8 @@ int main()
 	{
 		//activate first before setting uniforms
 		static_model_shaders.at(i).Activate();
-																			// static model load model, then load lightColor, then load lightPos for each static_model
+		
+		// static model load model, then load lightColor, then load lightPos for each static_model
 		glUniformMatrix4fv(glGetUniformLocation(static_model_shaders.at(i).ID, "model"), 1, GL_FALSE, glm::value_ptr(staticModels.at(i)));
 		glUniform4f(glGetUniformLocation(static_model_shaders.at(i).ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, 1.0f);
 		glUniform3f(glGetUniformLocation(static_model_shaders.at(i).ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
@@ -362,40 +244,6 @@ int main()
 		textures.emplace_back(Texture("brick.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE));
 		textures.back().texUnit(static_model_shaders.at(i), "tex0", 0);
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-	//skybox texture
-	Texture stars("stars.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
-	//set texture for object
-
-	//skybox setting initial uniform values
-	skyboxShader.Activate();
-	glUniformMatrix4fv(glGetUniformLocation(skyboxShader.ID, "model"), 1, GL_FALSE, glm::value_ptr(skyboxModel));
-	glUniform4f(glGetUniformLocation(skyboxShader.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, 1.0f);
-	glUniform3f(glGetUniformLocation(skyboxShader.ID, "lightPos"), lightPos.x, lightPos.y, lightPos.z);
-	stars.texUnit(skyboxShader, "tex0", 0);
-
-
-
-
-
-
-
-
-
-
-
-
 
 	// Enables the Depth Buffer
 	glEnable(GL_DEPTH_TEST);
@@ -412,14 +260,13 @@ int main()
 
 		// per-frame time logic
 		// -------------------
-
 		currentFrame = glfwGetTime();
 		deltaTime = currentFrame - lastFrame;
 		lastFrame = currentFrame;
 
 		// Specify the color of the background
 		glClearColor(0.17f, 0.15f, 0.15f, 1.0f);
-		// Clean the back buffer and depth buffer
+		// Clear the back buffer and depth buffer
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		// Handles camera inputs, passes on deltaTime for timing
@@ -431,6 +278,7 @@ int main()
 		player.changeInPosition.x = 0.0f;
 		player.changeInPosition.z = 0.0f;
 
+			//moving
 			float objectSpeed = 9.0f;
 			if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
 			{
@@ -498,7 +346,7 @@ int main()
 		glUniform3f(glGetUniformLocation(shaderProgram.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z);
 		// Export the camMatrix to the Vertex Shader of the pyramid
 		camera.Matrix(shaderProgram, "camMatrix");
-		// Binds texture so that is appears in rendering
+		// Binds texture so that it appears in rendering
 		brickTex.Bind();
 
 		// draw all models
@@ -530,24 +378,6 @@ int main()
 			glDrawElements(GL_TRIANGLES, static_models.at(i).indices.size(), GL_UNSIGNED_INT, 0);
 			VAOS_static.at(i).Unbind();
 		}
-
-
-
-
-
-		//draw skybox
-		skyboxShader.Activate();
-		glUniform3f(glGetUniformLocation(skyboxShader.ID, "camPos"), camera.Position.x, camera.Position.y, camera.Position.z);
-		glUniformMatrix4fv(glGetUniformLocation(skyboxShader.ID, "model"), 1, GL_FALSE, glm::value_ptr(skyboxModel));
-		glUniform4f(glGetUniformLocation(skyboxShader.ID, "lightColor"), lightColor.x, lightColor.y, lightColor.z, 1.0f);
-
-		camera.Matrix(skyboxShader, "camMatrix");
-
-		stars.Bind();
-
-		skyboxVAO.Bind();
-		glDrawElements(GL_TRIANGLES, skybox.indices.size(), GL_UNSIGNED_INT, 0);
-		skyboxVAO.Unbind();
 
 
 
@@ -586,12 +416,6 @@ int main()
 	lightVBO.Delete();
 	lightEBO.Delete();
 	lightShader.Delete();
-
-	skyboxShader.Delete();
-	stars.Delete();
-	skyboxVAO.Delete();
-	skyboxVBO.Delete();
-	skyboxEBO.Delete();
 
 	for (int i = 0; i < static_model_shaders.size(); i++)
 	{
